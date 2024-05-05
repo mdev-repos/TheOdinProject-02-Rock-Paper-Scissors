@@ -7,27 +7,83 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <main id="main">
-        <h1 id="main-title">ROCK PAPER SCISSORS</h1>
-        <div id="game-container">
-            <div class="choose-container">
-                <!-- CHOOSE IMAGE -->
-                <button id="rock-btn" class="btn">Rock</button>
+    <div id="game">
+        <h1 id="game-title">ROCK PAPER SCISSORS</h1>
+        <main id="game-container">        
+            <div class="game-player">
+                
+                <div class="player-stats">
+                    <h2 class="player-name">Player One</h2>
+                    <h2 id="humanPoints" class="player-points">0</h2>
+                </div>
+                
+                <div class="player-controls">
+                    <div class="choose-container">                       
+                        <img class="player-img" src="/Assets/rock-hand.png" alt="Rock">
+                        <button id="rock" class="btn">Rock</button>                                                                   
+                    </div>
+
+                    <div class="choose-container">                        
+                        <img class="player-img" src="/Assets/paper-hand.png" alt="Paper">
+                        <button id="paper" class="btn">Paper</button>                                              
+                    </div>
+
+                    <div class="choose-container">
+                        <img class="player-img" src="/Assets/scissors-hand.png" alt="Scissors">
+                        <button id="scissors" class="btn">Scsissors</button>                                               
+                    </div>
+
+                </div>                
             </div>
-            <div class="choose-container">
-                <!-- CHOOSE IMAGE -->
-                <button id="paper-btn" class="btn">Paper</button>
+
+            <div class="game-result">   
+                <div>
+                    <h3 id="resultTitle">Let's Play! Choose an option to start!</h3>
+                </div>
+                <div class="selection-results">
+                    <div>
+                        <img id="playerSelection" class="selected-img" src="" alt="">
+                    </div>
+                    <div>
+                        <img id="iaSelection" class="selected-img" src="" alt="">
+                    </div>
+                </div>
+                <div id="restart-section">
+                    <button class="restart-btn" id="restart-btn" hidden>Play Again?</button>
+                </div>
             </div>
-            <div class="choose-container">
-                <!-- CHOOSE IMAGE -->
-                <button id="scissors-btn" class="btn">Scsissors</button>
-            </div>
-        </div>
-    </main>
-            
+
+            <div class="game-player">
+                
+                <div class="player-stats">
+                    <h2 class="player-name">Skynet</h2>
+                    <h2 id="iaPoints" class="player-points">0</h2>
+                </div>            
+                
+                <div class="player-controls">
+                    <div class="choose-container">                       
+                        <img class="player-img" src="/Assets/rock-hand.png" alt="Rock">
+                        <p class="ia-text">Rock</p>                                                                   
+                    </div>
+
+                    <div class="choose-container">                        
+                        <img class="player-img" src="/Assets/paper-hand.png" alt="Paper">
+                        <p class="ia-text">Paper</p>                                                                   
+                    </div>
+
+                    <div class="choose-container">
+                        <img class="player-img" src="/Assets/scissors-hand.png" alt="Scissors">
+                        <p class="ia-text">Scissors</p>                                                                   
+                    </div>
+                </div>
+
+            </div>        
+        </main>
+    </div>        
+
     <script src="app.js"></script>    
 </body>
 </html>
